@@ -1,11 +1,17 @@
+// Este código para placas ESP32 funciona como un puente de comunicación serie.
+// Redirige los datos recibidos del puerto serie principal (conectado por USB) 
+// a un segundo puerto serie (definido por hardware o software), y viceversa.
+// Es útil para comunicar un ordenador con un dispositivo serie (como una Raspberry Pi)
+// a través del ESP32, permitiendo la depuración o programación.
+//hecho por Alejandro Rebolledo arebolledo@udd.cl 
 // Descomenta la siguiente línea para usar SoftwareSerial en lugar de HardwareSerial
-// #define USE_SOFTWARE_SERIAL
+ #define USE_SOFTWARE_SERIAL
 
 #ifdef USE_SOFTWARE_SERIAL
   #include <SoftwareSerial.h>
   // Define los pines para SoftwareSerial
-  #define SOFTWARE_SERIAL_RX_PIN 10
-  #define SOFTWARE_SERIAL_TX_PIN 11
+  #define SOFTWARE_SERIAL_RX_PIN 26
+  #define SOFTWARE_SERIAL_TX_PIN 27
   SoftwareSerial softSerial(SOFTWARE_SERIAL_RX_PIN, SOFTWARE_SERIAL_TX_PIN);
 #else
   #include <HardwareSerial.h>

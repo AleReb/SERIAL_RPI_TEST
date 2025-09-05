@@ -1,2 +1,31 @@
-/.vscode
+# Archivos y carpetas de compilación de Arduino
 /build
+*.o
+*.a
+*.elf
+*.hex
+*.bin
+*.eep
+*.lss
+*.map
+*.srec
+*.sym
+
+# Archivos específicos del IDE de Arduino
+*.ide
+
+# Archivos de configuración local de VSCode
+/.vscode/
+
+# Archivos temporales y de respaldo
+*.tmp
+*.bak
+*.bak~
+*~
+
+# Archivos de sistema operativo
+.DS_Store
+thumbs.db
+
+# Archivos de registro
+*.log
